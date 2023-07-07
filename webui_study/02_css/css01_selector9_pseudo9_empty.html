@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  <style>
+  
+    /*태그의 몸체 또는 자식이 없는 요소 반환 :empty width와 height로 영역 확보*/
+    p:empty{
+      width: 20px;
+      height: 20px;
+      background-color: yellow;
+    }
+
+    div{
+      width: 20px;
+      height: 20px;
+      background-color: red;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- 비어있으면 영역을 차지하지 않는다 -->
+  <p></p>
+  <p>2</p>
+  <p>3</p>
+
+  <div></div>
+</body>
+</html>

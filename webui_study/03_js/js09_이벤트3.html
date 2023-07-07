@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        /*
+            button: click 이벤트타입 ==> onclink
+            form태그의 submit: submit 이벤트타입 ==> onsubmit (중요)
+            input: focus, keyup 이벤트타입 ==> onfocus, onkeyup
+            select: change 이벤트 타입 ==> onchange
+            img : mouseover, mouseout ==> onmouseover, onmouseout
+
+            시스템이 호출
+            body : load 이벤트(Dom tree가 완성될 때) ==> onload
+        */
+        function fun(){
+            console.log("fun");
+        }
+    </script>
+</head>
+<body onload="fun()">
+    
+</body>
+</html>

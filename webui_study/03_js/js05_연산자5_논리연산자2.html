@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // 연산자 5 - 논리 연산자 => 실행결과는 논리값
+        /*
+            true/false 같은 논리값이 아닌
+            일반 데이터도 논리값으로 처리된다
+        */
+
+        console.log(!0); // true
+        console.log(!""); // true
+        console.log(!null); // true
+        console.log(!undefined); // true
+        console.log(!NaN); // true
+
+        console.log(!10); // false
+        console.log(!"Hello"); // false
+
+        console.log("###########################")
+
+        // 값1 && 값2: 값1이 true이면 값2 반환, false이면 값1 반환
+        console.log("Hello" && 0); // 0
+        console.log(0 && "Hello"); // 0
+
+        // 값1 || 값2: 값1이 true이면 값1 반환, false이면 값2 반환
+        console.log("Hello" || 0); // Hello
+        console.log(0 || "Hello"); // Hello
+    </script>
+</head>
+<body>
+
+    <p>안녕하세요</p>
+
+</body>
+</html>

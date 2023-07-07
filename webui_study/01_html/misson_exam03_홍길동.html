@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="target.html" >
+        <h1>Payment Form</h1><br>
+        <hr>
+        <p>Required fields are followed by *</p>
+        <h2>Contact Information</h2><br>
+
+        Name: *<input type="text" id="username" name="username" placeholder="smith" required><br>
+        <br>
+
+        <fieldset style="width: 600px; height: 80px" >
+            <legend>Gender *</legend><br>
+            Male <input type="radio" name="gender" id="gender" value="male" required> Female <input type="radio" name="gender" id="gender" value="female"> Other <input type="radio" name="gender" id="gender" value="other">
+        </fieldset><br>
+        
+        <p>address:</p>
+        <textarea name="m_address" id="m_address" cols="60" rows="8" placeholder="Enter the address"></textarea><br><br>
+
+        Email: * <input type="email" placeholder="smith@gmail.com" required><br><br>
+
+        <label for="card_type">Card Type: *</label> 
+        <select name="card_type" id="card_type" required>
+            <option value="none" selected disabled hidden>--Select a Card type--</option>
+            <option value="Rupay">Rupay</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Visa">Visa</option>
+        </select>
+
+        <br><br><input type="submit">
+    </form>
+</body>
+</html>

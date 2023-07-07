@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    let interview_score = prompt("1.면접 점수값을 입력하시오");
+    interview_score = Number.parseInt(interview_score);
+
+    let english_score = prompt("2.영어 점수값을 입력하시오");
+    english_score = Number.parseInt(english_score);
+
+    let average = (interview_score + english_score) / 2
+
+    console.log("면접점수 값", interview_score);
+    console.log("영어점수 값", english_score);
+    console.log("평균:", average);
+
+    if(average >= 80){
+        console.log("합격여부:합격");
+    }else{
+        console.log("합격여부:불합격");
+    }
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

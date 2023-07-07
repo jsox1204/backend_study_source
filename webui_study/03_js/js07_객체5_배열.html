@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // Array 객체 : 배열 관리
+
+        // 1. 생성방법
+
+        let arr1 = new Array(10,20,30);
+
+        let arr2 = [10,20,30]; // 권장
+        console.log(arr1);
+        console.log(arr2);
+
+        // 값 출력
+        // 가. 개별적으로 index 지정
+        console.log(arr2[0], arr2[1], arr2[2]);
+
+        // 나 for문
+        for(let index = 0; index < arr2.length; index++){
+            console.log(arr2[index]);
+        }
+
+        // 다. for of 문 : 실제값을 반복해서 조회
+        for(let n of arr2){
+            console.log(n);
+        }
+
+        // 다. for ing 문 : index값을 반복해서 조회
+        for(let n in arr2){
+            console.log(n, arr2[n]);
+        }
+    </script>
+</head>
+<body>
+
+    <p>안녕하세요</p>
+
+</body>
+</html>

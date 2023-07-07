@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안녕하세요</title>
+</head>
+<body>
+    <!-- 사용자 데이터 입력 태그 -->
+    <!-- input 태그는 inline 레벨 -->
+    <!-- id 속성은 필수는 아니지만 css나 자바스크립트에서 식별할 수 있게 하기 위해 사용 -->
+    <!-- required 속성은 반드시 입력하도록 만든다 -->
+    <!-- readonly 속성은 수정할 수 없게 한다 -->
+    <!-- autofocus 속성은 처음에 커서를 두도록 만든다 처음에 쓴 것을 우선-->
+    <!-- name 속성을 사용해야 타겟에 넘어간다 사용하지 않으면 넘어가지 않는다-->
+    <h2>GET 방식</h2>
+    <form action="target.html">
+
+        나이:<input type="text" id="age" name="age" value="10" readonly><br>
+
+        <label for="name">이름:</label><input type="text" name="username" autofocus id="name"><br>
+
+        <input type="text" required placeholder="주소입력" name="address" id="address"><br>
+        
+        <input type="submit"    value="로그인2">
+        
+    </form>
+
+    <h2>POST 방식</h2>
+    <form action="target.html" method="post">
+
+        나이:<input type="text" id="age" name="age" value="10" readonly><br>
+
+        <label for="name">이름:</label><input type="text" name="username" autofocus id="name"><br>
+
+        <input type="text" required placeholder="주소입력" name="address" id="address"><br>
+        
+        <input type="submit"    value="로그인2">
+        
+    </form>
+</body>
+</html>

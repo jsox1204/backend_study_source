@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "webui_study",
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.guides.bracketPairs": true
+	}
+}

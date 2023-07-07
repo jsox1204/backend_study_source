@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // BOM (Browser Object Model)
+        /*
+            웹브라우저를 open할 때 자동 생성된다
+
+            var window = new Window();
+            var screen = new Screen();
+            var history = new History();
+            var location = new Location();
+            var navigator = new Navigator();
+        */
+        // 2.Location 객체 : 웹브라우저 URL 관련 // 
+        console.log(location.href); // http://127.0.0.1:5500/03_js/js07_%EA%B0%9D%EC%B2%B46_BOM3_Location.html
+        console.log(location.protocol); // http:
+        console.log(location.pathname); // /03_js/js07_%EA%B0%9D%EC%B2%B46_BOM3_Location.html
+        console.log(location.host); // 127.0.0.1:5500
+        console.log(location.port); // 5500
+
+        function req(){ // URL 변경 함수 , 자주 사용
+            location.href="http://www.google.com";
+        }
+
+        function req2(){ // URL 변경 함수 , 자주 사용
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+
+    <p>안녕하세요</p>
+    <button onclick="req()">구글</button> <!-- 클릭하면 구글 사이트로 이동 -->
+    <button onclick="req2()">새로고침</button>
+
+</body>
+</html>
