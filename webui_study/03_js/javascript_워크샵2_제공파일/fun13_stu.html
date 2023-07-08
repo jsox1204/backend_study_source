@@ -5,13 +5,18 @@
 <title>Insert title here</title>
 
 <script>
-   /*
-       배열중에서 최대값 구하기
-   */
-
-   var arr = [ 11, 2, 33, 54, 5];
-   var m = max(arr);
-   console.log("최대값:", m );
+    function max(arr){
+        let max = 0;
+        for (n of arr){
+            if(max < n){
+                max = n;
+            }
+        }
+        return max;
+    }
+    var arr = [ 11, 2, 33, 54, 5];
+    var m = max(arr);
+    console.log("최대값:", m );
 </script>
 
 </head>

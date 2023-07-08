@@ -5,9 +5,15 @@
 <title>Insert title here</title>
 
 <script>
-   /*
-      짝수 배열 합 구하기 ( 0 , 2 , 4 , ...)
-   */
+   let sum = function (arr){
+      let result = 0;
+      for(n of arr){
+         if(n % 2 == 0){
+         result += n;
+         }  
+      }
+      return result;
+   }
    var arr = [ 1, 2, 3, 4, 5];
    var m = sum(arr);
    console.log("짝수 합계:", m );

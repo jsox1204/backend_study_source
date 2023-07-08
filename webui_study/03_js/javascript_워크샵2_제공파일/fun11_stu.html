@@ -5,10 +5,13 @@
 <title>Insert title here</title>
 
 <script>
-   /*
-  	 배열 합 구하기
-   */
-
+   function sum(arr){
+      let total = 0;
+      for (n of arr) {
+         total += n;
+      }
+      return total;
+   }
    var arr = [ 1, 2, 3, 4, 5];
    var m = sum(arr);
    console.log("합계:", m );

@@ -5,10 +5,15 @@
 <title>Insert title here</title>
 
 <script>
-   /*
-      banana 글자포함하는 단어수 구하기
-   */
-
+   function bananaCheck(arr){ // 배열에 banana가 포함한 요소의 갯수
+      let banana_count = 0;
+      for(n in arr){
+         if(arr[n].search("banana") != -1){
+            banana_count += 1;
+         }
+      }
+      return banana_count;
+   }
    var arr = ['BANANA','melon','banana','apple', 'banana','bananaa'];
    var cnt = bananaCheck(arr);
    console.log("banana 글자 포함 단어 갯수:", cnt );
