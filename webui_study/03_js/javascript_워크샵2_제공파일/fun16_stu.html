@@ -15,9 +15,9 @@
     let now_month = now.getMonth();
     let now_day = now.getDate();
     let age = now_year - ssn_year;
-    if(now_month < ssn_month && age <= 0){
+    if(now_month < ssn_month && age > 0){
       age -= 1;
-    }else if(now_month == ssn_month  && age <= 0){
+    }else if(now_month == ssn_month  && age > 0){
       if(now_day < ssn_day){
         age -= 1;
       }
