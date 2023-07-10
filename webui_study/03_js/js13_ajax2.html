@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+    }
+    </style>
+    <script>
+        var httpRequest = null;
+
+        function req(){
+            httpRequest = new XMLHttpRequest();
+
+            // 응답시 처리하는 콜백함수
+            httpRequest.onreadystatechange = responseFun;
+
+            //  요청정보 설정
+            var range = document.querySelector("#range").value;
+            var url = `https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt=${range}`
+            httpRequest.open("get", url, true); // 마지막 boolean 값 : true이면 비동기, false이면 동기로 처리
+
+            // 요청하기
+            httpRequest.send(null); // get방식이면 null 지정
+        }
+
+        function responseFun(){
+            // 요청이 성공인 경우에 처리 --> readyState값은 4, status값은 200
+            if(httpRequest.readyState == 4 && httpRequest.status == 200){
+                // 서버에서 응답한 JSON 얻기
+                var str = httpRequest.responseText;
+                var json = JSON.parse(str);
+                console.log(json);
+
+                boxoffice_result = json.boxOfficeResult.dailyBoxOfficeList
+                console.log(boxoffice_result);
+                
+
+                
+                var table = `
+                        <table>
+                            <tr>
+                                <th>순위</th>
+                                <th>제목</th>
+                                <th>개봉일</th>
+                            <tr>`;
+                            for(var daily of boxoffice_result){
+                                table += `<tr>
+                                    <td>${daily.rank}</td>
+                                    <td>${daily.movieNm}</td>
+                                    <td>${daily.openDt}</td>
+                                </tr>`;
+                            }
+                            table += `</table>`;
+                    
+                
+                document.querySelector("#result").innerHTML = table;
+            }
+        }
+    </script>
+</head>
+<body>
+    년월 예)20230623: <input type="text" id="range">
+    <button onclick="req()">요청</button>
+    <div id="result"></div>
+</body>
+</html>

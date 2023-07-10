@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    function init(){
+        document.querySelector("#up").onclick = function(){
+        let count = document.querySelector("#quantity");
+        count.value = Number.parseInt(count.value) + 1;
+        }
+        document.querySelector("#down").onclick = function(){
+            let count = document.querySelector("#quantity");
+            if(Number.parseInt(count.value) > 1){
+                count.value = Number.parseInt(count.value) - 1;
+            }else{
+                
+            }
+        }
+    }
+    
+
+</script>
+</head>
+<body onload="init()">
+갯수<input type="text" name="quantity"  id="quantity" value="1">
+<button id="up">+</button><button id="down">-</button>
+</body>
+</html>

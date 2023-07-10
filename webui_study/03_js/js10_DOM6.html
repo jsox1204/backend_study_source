@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function address_input(){
+            var isCheck = document.querySelector("#isSame").checked;
+            if(isCheck == true){
+                document.querySelector("#shipping_address").value = document.querySelector("#member_address").value;
+            } else {
+                document.querySelector("#shipping_address").value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    회원주소: <input type="text" value="서울시 서초구" id="member_address"><br>
+    배송지주소와 동일하면 체크하시오.
+    <input type="checkbox" onchange="address_input()" id="isSame">
+    <hr>
+    배송지 주소: <input type="text" id="shipping_address">
+</body>
+</html>
