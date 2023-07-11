@@ -33,7 +33,6 @@
                 // 서버에서 응답한 JSON 얻기
                 var str = httpRequest.responseText;
                 var json = JSON.parse(str);
-                console.log(json);
 
                 boxoffice_result = json.boxOfficeResult.dailyBoxOfficeList
                 console.log(boxoffice_result);
@@ -46,12 +45,16 @@
                                 <th>순위</th>
                                 <th>제목</th>
                                 <th>개봉일</th>
+                                <th>일관객수</th>
+                                <th>누적관객수</th>
                             <tr>`;
                             for(var daily of boxoffice_result){
                                 table += `<tr>
                                     <td>${daily.rank}</td>
                                     <td>${daily.movieNm}</td>
                                     <td>${daily.openDt}</td>
+                                    <td>${daily.audiCnt}</td>
+                                    <td>${daily.audiAcc}</td>
                                 </tr>`;
                             }
                             table += `</table>`;

@@ -5,14 +5,17 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 
-  
+  function result(){
+    let count = document.querySelector("textarea").textLength;
+    document.querySelector("#result").innerText = count;
+  }
 
 
 </script>
 </head>
 <body>
-글자수 세기<br>
-<textarea rows="10" cols="10"></textarea><br>
-입력문자수:<span id="result"></span>
+  글자수 세기<br>
+  <textarea rows="10" cols="10" onkeyup="result()"></textarea><br>
+  입력문자수:<span id="result"></span>
 </body>
 </html>

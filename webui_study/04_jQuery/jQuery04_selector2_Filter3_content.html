@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        // DOM Tree가 모두 완료된 후 호출
+        $(document).ready(function(){
+            // :contains(문자열) ==> 문자열을 포함하는 요소 반환, 대소문자 구별
+            // $("div:contains('John')").css("color", "red");
+
+            // has(선택자) ==> 지정된 선택자가 자식요소로 존재하는 요소 반환
+            $("div:has('p')").css("color", "red");
+
+            // :empty ==> 자식요소가 없는 요소 반환
+            $("td:empty").css("background-color","red");
+
+            // :parent ==> 자식요소가 있는 요소 반환
+            $("td:parent").css("background-color","yellow");
+        });
+        
+
+    </script>
+</head>
+<body>
+    <div>John Resig</div>
+    <div>George Martin</div>
+    <div>Malcom john Sinclair</div>
+    <div>
+        <p>HiJohn Resig</p>
+    </div>
+
+    <table border="1">
+        <tr>
+            <td>TD #0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>TD #2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TD#5</td>
+        </tr>
+    </table>
+
+</body>
+</html>
