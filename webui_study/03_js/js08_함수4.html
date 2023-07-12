@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // 함수 (function)
+        // arrow 함수와 this
+
+        console.log(window, this); // 같은 객체이다
+
+        this.n = 20; // window객체에 동적으로 n변수에 20 저장
+
+        // var x = {age:20};
+        // x.name="홍길동";
+        // console.log(x); // age 속성만 있는 객체에 name 속성 추가
+
+        // 익명함수
+        var a = {
+            n:10,
+            f:function(){
+                console.log("익명합수", this) // a 사용자 객체
+            }
+        };
+        a.f();
+
+        // arrow 함수
+        // arrow 함수 내에서의 this는 arrow함수를 가진 사용자 객체가 아닌 전역객체를 참조한다
+        var b = {
+            n:10,
+            f:()=>{
+                console.log(this); // window. 객체
+            }
+        };
+        b.f();
+    </script>
+</head>
+<body>
+</body>
+</html>
